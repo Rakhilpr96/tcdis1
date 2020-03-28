@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="Description" name="This website gives crowd density status in trains in India"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="20">
+	<title>Crowd Status</title> 
+	<link rel="stylesheet" type="text/css" href="/static/crowd.css">
+	<style>
+
+	/* For devices smaller than 400px: */
+h1 { 
+	text-align : center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: green;
+	font-size:20px;
+	font-family: "sans-serif" ;
+	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+	
+	
+		}
+
+
+	/* For devices 400px and larger: */
+	@media only screen and (min-device-width: 400px) {
+h1 { 
+	text-align : center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: green;
+	font-size:30px;
+	font-family: "sans-serif" ;
+	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+	
+	
+		}
+
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+	padding-left: 45px;
+  height: 700px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.wrapper {
+    text-align: center;
+		padding-bottom:30px;
+}
+
+
+
+
+
+	</style>
+
+<head>
+<body>
+
+ {% if n|int == 16301 %} 
+
+	<h1>CROWD STATUS OF VENAD EXPRESS </h1><br>
+<div class="wrapper">
+	<button class="button" onclick="location.reload()">Refresh</button>
+</div>
+
+	<div class="row">
+  <div class="column" style="background-color:transparent;">
+    <ul>		
+		
+    <li>
+        
+        <!-- class1 -->
+    <p style="width:200%" data-value="">1 EOG</p>
+        <progress max="100" value="0" class="class1">
+  
+            <div class="progress-bar">
+                <span style="width: 80%">80%</span>
+            </div>
+        </progress>
+        
+       <!-- class1 -->
+    <p style="width:200%" data-value={{x}}%>2 UR</p>
+        <progress max="100" value={{x}} class="class1">
+  
+            <div class="progress-bar">
+                <span style="width: 80%">80%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="50%">3 UR</p>
+        <progress max="100" value="50" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="45%">4 UR</p>
+        <progress max="100" value="45" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="33%">5 UR</p>
+        <progress max="100" value="33" class="class1">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="78%">6 UR</p>
+        <progress max="100" value="78" class="class2">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="25%">7 UR</p>
+        <progress max="100" value="25" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="12%">8 UR</p>
+        <progress max="100" value="12" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="89%">9 UR</p>
+        <progress max="100" value="89" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="95%">10 UR</p>
+        <progress max="100" value="95" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="">11 D1</p>
+        <progress max="100" value="0" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+
+        
+    </li>
+  </div>
+  <div class="column" style="background-color:transparent;">
+   <li>
+	    <!-- class2 -->
+    <p style="width:200%" data-value="">12 C1</p>
+        <progress max="100" value="0" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="">13 PC</p>
+        <progress max="100" value="0" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="77%">14 UR</p>
+        <progress max="100" value="77" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="48%">15 UR</p>
+        <progress max="100" value="48" class="class1">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="54%">16 UR</p>
+        <progress max="100" value="54" class="class2">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="35%">17 UR</p>
+        <progress max="100" value="35" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="40%">18 UR</p>
+        <progress max="100" value="40" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="24%">19 UR</p>
+        <progress max="100" value="24" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+		<!-- class2 -->
+    <p style="width:200%" data-value="62%">20 UR</p>
+        <progress max="100" value="62" class="class2">
+  
+            <div class="progress-bar">
+                <span style="width: 60%">60%</span>
+            </div>
+        </progress>
+        
+        <!-- class3 -->
+    <p style="width:200%" data-value="85%">21 UR</p>
+        <progress max="100" value="85" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+		<p style="width:200%" data-value="">22 EOG</p>
+        <progress max="100" value="0" class="class3">
+     
+            <div class="progress-bar">
+                <span style="width: 50%">50%</span>
+            </div>
+        </progress>
+
+
+		 
+            </div>
+        </progress>  
+
+    </li>
+</ul>
+  </div>
+</div>
+	{% else %}
+		<h1>NOT ACTIVATED </h1>
+	{% endif %}
+
+</body>	
+</html>
+

@@ -1,0 +1,48 @@
+    /* For devices smaller than 400px: */
+body {
+		background-image: url('cdmob.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed; 
+		background-size: cover;
+	}
+
+	/* For devices 400px and larger: */
+	@media only screen and (min-device-width: 400px) {
+body {
+
+	background-image: url('crowd.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	background-size: cover;
+	
+	}
+	}
+
+h1 { 
+	text-align : center;
+	padding-top: 80px;
+	padding-bottom: 20px;
+	color: #2460e3;
+	font-family: "sans-serif" ;
+	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+	
+	
+		}
+
+p { 
+	text-align : center;
+	color: black;
+	
+		}
+
+meter{
+	
+	width: 15%;
+  height: 30px;
+	background: #eee;
+
+
+}
+
+
+

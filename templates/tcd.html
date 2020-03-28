@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="Description" name="This website gives crowd density status in trains in India"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Train Crowd Desity Information System</title> 
+	<link rel="stylesheet" type="text/css" href="/static/tcd.css">
+	</head>
+
+	<body>
+		
+		<img src="/static/images/train_icon.png" alt="train icon" class="center" style=width:100px;height:100px;>
+		<h1>TRAIN CROWD DENSITY INFORMATION SYSTEM</h1>
+
+		<form action = "https://tcdis1.herokuapp.com/crowd_status" method = "get">
+  				
+ 		 	<input align="top" type="number" placeholder="Enter Train Number" name="trainnumber">
+ 			<input type="submit" value="Get Crowd Status">
+			
+			
+		</form> 
+
+	</body>
+	
