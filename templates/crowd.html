@@ -21,7 +21,8 @@ var intervalID = setInterval(update_values,1000);
         $.getJSON($SCRIPT_ROOT +'/update',
                
       function(data) {
-		$('#result').text(data.result);
+		$('#result').val(data.result);
+		$('#result1').text(data.result);
 		console.log(data)
 				
 	
@@ -117,6 +118,7 @@ h1 {
 	<img src="/static/images/train_icon.png" alt="train icon" class="center" style=width:100px;height:100px;>
 
 	<h1>CROWD STATUS OF VENAD EXPRESS </h1><br>
+	<span id="result1"></span>
 	
 	<div class="row">
   <div class="column" style="background-color:transparent;">
