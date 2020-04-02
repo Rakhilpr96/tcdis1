@@ -118,7 +118,7 @@ h1 {
 	<img src="/static/images/train_icon.png" alt="train icon" class="center" style=width:100px;height:100px;>
 
 	<h1>CROWD STATUS OF VENAD EXPRESS </h1><br>
-	<span id="result1"></span>
+	
 	
 	<div class="row">
   <div class="column" style="background-color:transparent;">
@@ -136,8 +136,8 @@ h1 {
         </progress>
         
        <!-- class1 -->
-    <p style="width:200%" data-value={{x}}%>2 UR</p>
-        <progress max="100" value={{x}} class="class1">
+    <span>2&nbsp;UR</span><span id="pos"><span id="result1"></span>%</span>
+        <progress id="result" max="100" class="class1">
   
             <div class="progress-bar">
                 <span style="width: 80%">80%</span>
@@ -146,7 +146,7 @@ h1 {
         
         <!-- class3 -->
    <p style="width:200%" data-value="50%">3 UR</p>
-        <progress id="result" max="100"  class="class3">
+        <progress  max="100"  value="50" class="class3">
      
             <div class="progress-bar">
                 <span style="width: 50%">50%</span>
