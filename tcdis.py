@@ -1,4 +1,4 @@
-from flask import Flask, render_template,url_for,request
+from flask import Flask,jsonify,render_template,url_for,request
 import pyrebase
 
 
@@ -19,6 +19,17 @@ config = {
 
 
 app = Flask(__name__)
+
+@app.route('/update')
+def refresh():
+	firebase = pyrebase.initialize_app(config)
+	db = firebase.database()
+	result = db.child("VENAD EXPRESS").child("Coach Number : 1").get().val()
+	print(result["Percentage of crowd"])
+	per_from_db = int(result["Percentage of crowd"])	
+	count = per_from_db
+	return jsonify(result=count)
+
 
 @app.route('/')
 def hello_world(): 
