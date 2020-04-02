@@ -18,7 +18,7 @@
 var intervalID = setInterval(update_values,1000);
 
   function update_values() {
-        $.getJSON($SCRIPT_ROOT +'/update',
+        $.getJSON($SCRIPT_ROOT +'https://tcdis1.herokuapp.com/update',
                
       function(data) {
 		$('#result').val(data.result);
