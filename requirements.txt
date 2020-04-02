@@ -115,7 +115,7 @@ python-Levenshtein==0.12.0
 pytoml==0.1.21
 pytz==2019.3
 pyudev==0.21.0
-pyxdg==0.25
+pyxdg==0.26
 PyYAML==3.12
 pyzmq==19.0.0
 reportlab==3.4.0
