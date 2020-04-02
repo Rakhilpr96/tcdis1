@@ -38,13 +38,7 @@ def hello_world():
 @app.route('/crowd_status', methods = ['GET'])
 def result():
 	no = request.args.get('trainnumber')
-	firebase = pyrebase.initialize_app(config)
-	db = firebase.database()
-	result = db.child("VENAD EXPRESS").child("Coach Number : 1").get().val()
-	per_from_db = int(result["Percentage of crowd"])
-	count = per_from_db
-	#print("count" , x)
-	return render_template('crowd.html',n=no,x=count)
+	return render_template('crowd.html',n=no)
   
 
 if __name__ == '__main__':
