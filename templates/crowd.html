@@ -4,9 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="Description" name="This website gives crowd density status in trains in India"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="refresh" content="1">
+	<!--<meta http-equiv="refresh" content="1">-->
 	<title>Crowd Status</title> 
 	<link rel="stylesheet" type="text/css" href="/static/crowd.css">
+	
+		
+	<script type="text/javascript"
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+	</script>
+	<script type="text/javascript">
+var intervalID = setInterval(update_values,1000);
+
+  function update_values() {
+        $.getJSON($SCRIPT_ROOT +'/update',
+               
+      function(data) {
+		$('#result').val(data.result);
+    		$('#result1').text(data.result);
+		console.log(data)
+				
+	
+      });
+      
+    };
+   
+    
+	</script>
+		
+		
 	<style>
 
 	/* For devices smaller than 400px: */
@@ -75,7 +102,10 @@ h1 {
   width: 50%;
 }
 
-
+#pos{
+	padding-left: 235px;
+		
+		}	
 
 
 
@@ -85,6 +115,7 @@ h1 {
 <body>
 
  {% if n|int == 16301 %} 
+	<img src="/static/images/train_icon.png" alt="train icon" class="center" style=width:100px;height:100px;>
 
 	<h1>CROWD STATUS OF VENAD EXPRESS </h1><br>
 
@@ -113,8 +144,8 @@ h1 {
         </progress>
         
         <!-- class3 -->
-    <p style="width:200%" data-value="50%">3 UR</p>
-        <progress max="100" value="50" class="class3">
+   <span>3&nbsp;UR</span><span id="pos"><span id="result1"></span>%</span>
+        <progress id="result" max="100"  class="html5">
      
             <div class="progress-bar">
                 <span style="width: 50%">50%</span>
